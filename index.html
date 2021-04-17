@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8"/>
+		<title>Онлайн Шифрование Файлов</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<link href="http://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet" />
+		<link href="assets/css/style.css" rel="stylesheet" />
+
+	</head>
+
+	<body>
+
+		<a class="back"></a>
+
+		<div id="stage">
+
+			<div id="step1">
+				<div class="content">
+					<h1>Что вы хотите сделать</h1>
+					<a class="button encrypt green">Шифровать Файл</a>
+					<a class="button decrypt magenta">Расшифровать Файл</a>
+				</div>
+			</div>
+
+			<div id="step2">
+
+				<div class="content if-encrypt">
+					<h1>Выберете файл для шифрования</h1>
+					<h2>Файл будет создан. Данные не будут отправленны на наш сервер.</h2>
+					<a class="button browse blue">Выбрать</a>
+
+					<input type="file" id="encrypt-input" />
+				</div>
+
+				<div class="content if-decrypt">
+					<h1>Выберете файл для расшифровки</h1>
+					<h2>Принимаются файлы зашифрованные только этим инструментом</h2>
+					<a class="button browse blue">Выбрать</a>
+
+					<input type="file" id="decrypt-input" />
+				</div>
+
+			</div>
+
+			<div id="step3">
+
+				<div class="content if-encrypt">
+					<h1>Введите пароль</h1>
+					<h2>Пароль бутет служить ключём шифрования. Постарайтесть его не забыть! </h2>
+
+					<input type="password" />
+					<a class="button process red">Шифровать!</a>
+				</div>
+
+				<div class="content if-decrypt">
+					<h1>Введите пароль</h1>
+					<h2>Введите пароль от данного файла, который вы использовали для шифрования.</h2>
+
+					<input type="password" />
+					<a class="button process red">Расшифровать!</a>
+				</div>
+
+			</div>
+
+			<div id="step4">
+
+				<div class="content">
+					<h1>Ваш файл готов!</h1>
+					<a class="button download green">Скачать</a>
+				</div>
+
+			</div>
+		</div>
+	</body>
+
+	<!-- Include the AES algorithm of the crypto library -->
+	<script src="assets/js/aes.js"></script>
+
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="assets/js/script.js"></script>
+
+</html>
